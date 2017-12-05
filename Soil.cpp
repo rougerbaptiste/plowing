@@ -1,14 +1,11 @@
+
 #include "Soil.h"
 
 using namespace std;
+
 Soil::Soil() : m_fertility(100), m_stock(0)
 {
     //ctor
-}
-
-Soil::~Soil()
-{
-    //dtor
 }
 
 double Soil::getFertility() const
