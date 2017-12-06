@@ -1,18 +1,18 @@
-#include "Wheat.h"
+#include "Grass.h"
 
 using namespace std;
 
-Wheat::Wheat() : m_growth(0), m_production(0), m_exists(false)
+Grass::Grass() : m_growth(0), m_production(0), m_exists(false)
 {
     //m_fertility = 100;
 }
 
-double Wheat::getGrowth()
+double Grass::getGrowth()
 {
     return m_growth;
 }
 
-void Wheat::setGrowth(double newGrowth)
+void Grass::setGrowth(double newGrowth)
 {
     m_growth = newGrowth;
     if(m_growth > 100)
@@ -21,27 +21,27 @@ void Wheat::setGrowth(double newGrowth)
     }
 }
 
-int Wheat::getProduction()
+int Grass::getProduction()
 {
     return m_production;
 }
 
-void Wheat::setProduction(int newProduction)
+void Grass::setProduction(int newProduction)
 {
     m_production = newProduction;
 }
 
-bool Wheat::getExists()
+bool Grass::getExists()
 {
     return m_exists;
 }
 
-void Wheat::setExists()
+void Grass::setExists()
 {
     m_exists = true;
 }
 
-void Wheat::changeGrowth(double growthChange)
+void Grass::changeGrowth(double growthChange)
 {
     m_growth += growthChange;
     if(m_growth > 100)
@@ -50,7 +50,7 @@ void Wheat::changeGrowth(double growthChange)
     }
 }
 
-void Wheat::changeProduction(int productionChange)
+void Grass::changeProduction(int productionChange)
 {
     m_production += productionChange;
 }

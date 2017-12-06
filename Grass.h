@@ -1,10 +1,10 @@
-#ifndef DEF_WHEAT
-#define DEF_WHEAT
+#ifndef DEF_GRASS
+#define DEF_GRASS
 
-class Wheat
+class Grass
 {
     public:
-        Wheat();
+        Grass();
         double getGrowth();
         void setGrowth(double newGrowth);
         int getProduction();
