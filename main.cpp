@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Field.h"
 #include "Soil.h"
 
 // #include "Grass.h"
@@ -17,6 +18,10 @@ int main()
     lil.changeGrowth(5);
     lil.changeProduction(2);
     cout << lil.getExists() << lil.getGrowth() << lil.getProduction() << endl;
+    Field champs;
+    cout << champs.getWheatExists(1,1) << endl;
+    champs.setWheatExists(1,1);
+    cout << champs.getWheatExists(1,1) << endl;
     //double a (david.getFertility());
 //     cout << david.getFertility() << endl;
 //     david.setFertility(50);

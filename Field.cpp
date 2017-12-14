@@ -1,5 +1,15 @@
 #include "Field.h"
 
-Field::Field(int fieldNb, int fieldWidth, int fieldHeight) : m_fieldNumber(int fieldNb), m_soils[int fieldWidth][int fieldHeight]()
+Field::Field() : m_fieldNumber(), m_soils()
 {
+}
+
+bool Field::getWheatExists(int xpos, int ypos)
+{
+    return m_soils[xpos][ypos].getWheatExists();
+}
+
+void Field::setWheatExists(int xpos, int ypos)
+{
+    m_soils[xpos][ypos].setWheatExists();
 }

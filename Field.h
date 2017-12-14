@@ -6,11 +6,16 @@
 class Field
 {
     public:
-        Field(int fieldNb, int fieldWidth, int fieldHeight);
+        Field();
+        
+        bool getWheatExists(int xpos, int ypos);
+        void setWheatExists(int xpos, int ypos);
 
     private:
         int m_fieldNumber;
-        Soil m_soils;
+        static const int fieldWidth = 10;
+        static const int fieldHeight = 10;
+        Soil m_soils [10][10];
 
 };
 
