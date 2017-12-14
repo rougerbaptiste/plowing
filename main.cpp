@@ -19,9 +19,9 @@ int main()
     lil.changeProduction(2);
     cout << lil.getExists() << lil.getGrowth() << lil.getProduction() << endl;
     Field champs;
-    cout << champs.getWheatExists(1,1) << endl;
-    champs.setWheatExists(1,1);
-    cout << champs.getWheatExists(1,1) << endl;
+    cout << champs.getStock(1,1) << endl;
+    champs.setStock(16, 1, 1);
+    cout << champs.getStock(1, 1) << endl;
     //double a (david.getFertility());
 //     cout << david.getFertility() << endl;
 //     david.setFertility(50);

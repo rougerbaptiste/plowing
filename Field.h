@@ -8,8 +8,20 @@ class Field
     public:
         Field();
         
+        double getFertility(int xpos, int ypos);
+        void setFertility(double newFertility, int xpos, int ypos);
+        int getStock(int xpos, int ypos);
+        void setStock(int newStock, int xpos, int ypos);
+        
         bool getWheatExists(int xpos, int ypos);
         void setWheatExists(int xpos, int ypos);
+        double getWheatGrowth(int xpos, int ypos);
+        void setWheatGrowth(double newGrowth, int xpos, int ypos);
+        int getWheatProduction(int xpos, int ypos);
+        void setWheatProduction(int newProduction, int xpos, int ypos);
+        void changeWheatGrowth(double growthChange, int xpos, int ypos);
+        void changeWheatProduction(int productionChange, int xpos, int ypos);
+
 
     private:
         int m_fieldNumber;
