@@ -9,19 +9,35 @@ using namespace std;
 int main()
 {
 //     Soil david;
-    Grass lil;
-    cout << lil.getExists() << lil.getGrowth() << lil.getProduction() << endl;
-    lil.setExists();
-    lil.setGrowth(10);
-    lil.setProduction(2);
-    cout << lil.getExists() << lil.getGrowth() << lil.getProduction() << endl;
-    lil.changeGrowth(5);
-    lil.changeProduction(2);
-    cout << lil.getExists() << lil.getGrowth() << lil.getProduction() << endl;
+
     Field champs;
-    cout << champs.getStock(1,1) << endl;
-    champs.setStock(16, 1, 1);
-    cout << champs.getStock(1, 1) << endl;
+    int i;
+    int j;
+    for (i = 0 ; i < 10; i++)
+    {
+        for (j = 0; j <10; j++)
+        {
+            if (i%3==0 and j%2 ==0)
+            {
+                champs.setWheatExists(i,j); 
+            }
+        }
+    }
+
+    int time;
+    for (time = 0; time < 1600; time++)
+    {
+        for (i = 0 ; i < 10; i++)
+        {
+            for (j = 0; j <10; j++)
+            {
+                champs.changeWheat(i,j);
+            }
+        }
+        cout << champs.getWheatGrowth(0,0) << " " << champs.getWheatGrowth(1,0) << " " << champs.getWheatGrowth(2,0) << " " << champs.getWheatGrowth(3,0) <<endl;
+        cout << champs.getWheatGrowth(0,1) << " " << champs.getWheatGrowth(1,1) << " "<< champs.getWheatGrowth(2,1) << " " << champs.getWheatGrowth(3,1) <<endl;
+    }
+
     //double a (david.getFertility());
 //     cout << david.getFertility() << endl;
 //     david.setFertility(50);
